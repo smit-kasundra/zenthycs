@@ -19,7 +19,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
-  cursor: none !important; /* Force custom cursor */
+}
+
+@media (min-width: 769px) {
+  * {
+    cursor: none !important; /* Force custom cursor on desktop */
+  }
 }
 
 body {
@@ -228,4 +233,18 @@ ul {
   display: inline-block;
 }
 
-/* Base custom cursor styling if it's external to component */
+@media (max-width: 768px) {
+  .bg-blobs, 
+  div[style*="z-index: -1"] {
+    display: none !important; /* Hide expensive blur background on mobile to prevent lag */
+  }
+
+  /* Improve spacing and typography for mobile */
+  .section-padding { padding: 4rem 0 !important; }
+  .heading-xl { font-size: clamp(2.5rem, 10vw, 3rem); padding-top: 1rem; }
+  .heading-l { font-size: clamp(2rem, 8vw, 2.5rem); }
+  
+  /* Reset cursor to auto on mobile explicitly */
+  * { cursor: auto !important; }
+}
+

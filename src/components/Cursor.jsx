@@ -1,11 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 export default function Cursor() {
   const cursorRef = useRef(null);
   const glowRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+    
     const cursor = cursorRef.current;
     const glow = glowRef.current;
     
@@ -40,7 +50,9 @@ export default function Cursor() {
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('mouseover', handleHover);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <>
