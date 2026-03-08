@@ -233,27 +233,54 @@ ul {
   display: inline-block;
 }
 
+/* Glow background adjustments */
+.bg-glow {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  /* Tablet styles */
+  .bg-blobs {
+    display: block !important;
+  }
+  .blob {
+    opacity: 0.6 !important;
+  }
+  .bg-glow {
+    opacity: 0.5 !important;
+  }
+  div[style*="z-index: -1"] {
+    opacity: 0.5 !important;
+  }
+  
+  .heading-xl { font-size: clamp(3rem, 8vw, 4rem); }
+  .heading-l { font-size: clamp(2.2rem, 6vw, 3rem); }
+  
+  /* Reset cursor to auto on tablet explicitly */
+  * { cursor: auto !important; }
+}
+
 @media (max-width: 768px) {
-  /* Brighter shades for mobile backgrounds/blobs and removing animation for performance instead of fully hiding */
+  /* Mobile styles */
   .bg-blobs {
     display: block !important;
   }
   .blob {
     animation: none !important;
     filter: blur(60px) !important;
-    opacity: 0.6 !important;
+    opacity: 0.8 !important; /* Brighter shades for mobile */
+  }
+  .bg-glow {
+    opacity: 0.8 !important; /* Brighten the glow background */
   }
   div[style*="z-index: -1"] {
-    opacity: 0.4 !important; /* Boost gradient brightness inline */
+    opacity: 0.8 !important; /* Boost gradient brightness inline */
   }
 
   /* Improve spacing and typography for mobile */
   .section-padding { padding: 4rem 0 !important; }
   .heading-xl { font-size: clamp(2.5rem, 10vw, 3rem); padding-top: 1rem; }
   .heading-l { font-size: clamp(2rem, 8vw, 2.5rem); }
-  
-  /* Reset cursor to auto on mobile explicitly */
-  * { cursor: auto !important; }
 }
 
 /* Base Responsive Component Classes */
@@ -280,6 +307,33 @@ ul {
 }
 .inquiry-panel {
   padding: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .process-line {
+    left: 40px;
+  }
+  .process-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+  .process-card {
+    margin-left: 2rem;
+    padding: 2rem;
+  }
+  .stats-panel {
+    padding: 4rem 2rem;
+  }
+  .service-card {
+    padding: 2.5rem 1.8rem;
+  }
+  .service-modal {
+    padding: 2.5rem;
+  }
+  .inquiry-panel {
+    padding: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {

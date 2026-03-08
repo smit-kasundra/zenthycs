@@ -20,8 +20,8 @@ export default function CTA() {
           background: 'linear-gradient(135deg, rgba(5,5,8,0.9), rgba(13,13,20,0.9))'
         }}
       >
-        <div style={{ position: 'absolute', top: '-20%', left: '-10%', width: '300px', height: '300px', background: 'var(--accent-purple)', filter: 'blur(100px)', opacity: 0.2 }} />
-        <div style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '400px', height: '400px', background: 'var(--accent-neon)', filter: 'blur(120px)', opacity: 0.15 }} />
+        <div className="bg-glow" style={{ position: 'absolute', top: '-20%', left: '-10%', width: '300px', height: '300px', background: 'var(--accent-purple)', filter: 'blur(100px)', opacity: 0.2 }} />
+        <div className="bg-glow" style={{ position: 'absolute', bottom: '-20%', right: '-10%', width: '400px', height: '400px', background: 'var(--accent-neon)', filter: 'blur(120px)', opacity: 0.15 }} />
 
         <h2 className="heading-xl" style={{ margin: '0 auto', maxWidth: '900px', position: 'relative', zIndex: 1 }}>
           Let's Build Something <span className="text-gradient">Powerful</span> For Your Business.

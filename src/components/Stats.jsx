@@ -32,7 +32,7 @@ export default function Stats() {
   return (
     <section className="section-padding container">
       <div className="glass-panel stats-panel" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '-50%', left: '50%', transform: 'translateX(-50%)', width: '100%', height: '100%', background: 'radial-gradient(ellipse, var(--accent-purple) 0%, transparent 70%)', opacity: 0.1, filter: 'blur(80px)' }} />
+        <div className="bg-glow" style={{ position: 'absolute', top: '-50%', left: '50%', transform: 'translateX(-50%)', width: '100%', height: '100%', background: 'radial-gradient(ellipse, var(--accent-purple) 0%, transparent 70%)', opacity: 0.1, filter: 'blur(80px)' }} />
 
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}

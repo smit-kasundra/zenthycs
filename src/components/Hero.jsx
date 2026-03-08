@@ -20,8 +20,8 @@ export default function Hero() {
   return (
     <section className="section-padding" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden', paddingTop: '150px' }}>
       {/* Animated BG Graphic */}
-      <div style={{ position: 'absolute', right: '-10%', top: '20%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, var(--accent-purple) 0%, transparent 70%)', opacity: 0.15, filter: 'blur(100px)', zIndex: -1 }}></div>
-      <div style={{ position: 'absolute', left: '-10%', bottom: '10%', width: '40vw', height: '40vw', background: 'radial-gradient(circle, var(--accent-blue) 0%, transparent 70%)', opacity: 0.15, filter: 'blur(80px)', zIndex: -1 }}></div>
+      <div className="bg-glow" style={{ position: 'absolute', right: '-10%', top: '20%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, var(--accent-purple) 0%, transparent 70%)', opacity: 0.15, filter: 'blur(100px)', zIndex: -1 }}></div>
+      <div className="bg-glow" style={{ position: 'absolute', left: '-10%', bottom: '10%', width: '40vw', height: '40vw', background: 'radial-gradient(circle, var(--accent-blue) 0%, transparent 70%)', opacity: 0.15, filter: 'blur(80px)', zIndex: -1 }}></div>
 
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         <motion.div variants={container} initial="hidden" animate="show" style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>

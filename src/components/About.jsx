@@ -40,8 +40,8 @@ export default function About() {
         style={{ position: 'relative' }}
       >
         <div className="glass-panel" style={{ padding: '3rem', position: 'relative', zIndex: 1, overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '150px', height: '150px', background: 'var(--accent-neon)', filter: 'blur(50px)', zIndex: -1, opacity: 0.5 }}></div>
-          <div style={{ position: 'absolute', bottom: '-10%', left: '-10%', width: '150px', height: '150px', background: 'var(--accent-blue)', filter: 'blur(50px)', zIndex: -1, opacity: 0.5 }}></div>
+          <div className="bg-glow" style={{ position: 'absolute', top: '-10%', right: '-10%', width: '150px', height: '150px', background: 'var(--accent-neon)', filter: 'blur(50px)', zIndex: -1, opacity: 0.5 }}></div>
+          <div className="bg-glow" style={{ position: 'absolute', bottom: '-10%', left: '-10%', width: '150px', height: '150px', background: 'var(--accent-blue)', filter: 'blur(50px)', zIndex: -1, opacity: 0.5 }}></div>
           
           <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" alt="Team collaborating" style={{ width: '100%', borderRadius: '16px', filter: 'grayscale(50%) contrast(1.2)' }} />
           

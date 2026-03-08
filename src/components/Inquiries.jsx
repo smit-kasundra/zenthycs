@@ -86,7 +86,7 @@ export default function Inquiries() {
         className="glass-panel inquiry-panel"
         style={{ maxWidth: '800px', margin: '0 auto', position: 'relative', overflow: 'hidden' }}
       >
-        <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '200px', height: '200px', background: 'var(--accent-blue)', filter: 'blur(100px)', opacity: 0.1, zIndex: 0 }} />
+        <div className="bg-glow" style={{ position: 'absolute', top: '-10%', right: '-10%', width: '200px', height: '200px', background: 'var(--accent-blue)', filter: 'blur(100px)', opacity: 0.1, zIndex: 0 }} />
         
         {isSubmitted ? (
           <motion.div 
