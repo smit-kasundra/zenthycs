@@ -261,28 +261,83 @@ ul {
 }
 
 @media (max-width: 768px) {
-  /* Mobile styles */
+  /* Mobile styles - Bright off-white background */
+  body {
+    background-color: #f8f9fa !important;
+    color: #050508 !important;
+  }
+  
+  /* Update secondary background and borders for light theme */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  .text-secondary {
+    color: #4b5563 !important;
+  }
+  .text-body {
+    color: #4b5563 !important;
+  }
+  
+  /* Form Inputs and selects override for Light Mode */
+  input, select, textarea {
+    background: rgba(0, 0, 0, 0.03) !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    color: #050508 !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #6b7280 !important;
+  }
+  option {
+    background: white !important;
+    color: #050508 !important;
+  }
+  
+  /* Footer override for Light Mode */
+  footer {
+    background: #ffffff !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
+  .interactive {
+    color: #050508 !important;
+  }
+
   .bg-blobs {
     display: block !important;
   }
   .blob {
     animation: none !important;
     filter: blur(80px) !important;
-    opacity: 0.9 !important; /* Extremely bright shades for mobile */
-    transform: scale(1.3) !important; /* Grow them so they spread more color */
+    opacity: 0.4 !important; /* Lighter shades for light bg */
+    transform: scale(1.3) !important;
   }
   .bg-glow {
-    opacity: 0.95 !important; /* Very bright glow background */
+    opacity: 0.5 !important; /* Lighter glow for light bg */
     filter: blur(80px) !important;
-    transform: scale(1.5) !important; /* Spread the glow */
+    transform: scale(1.5) !important;
   }
   div[style*="z-index: -1"] {
-    opacity: 0.9 !important; /* Boost gradient brightness inline */
+    opacity: 0.5 !important;
+  }
+  
+  /* Span color overrides for Light Mode */
+  h2 span[style*="font-style: italic"] {
+    color: #4b5563 !important;
+  }
+  span {
+    color: inherit;
+  }
+  
+  nav {
+    background: rgba(248, 249, 250, 0.8) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
   }
 
   /* Improve spacing and typography for mobile */
-  .section-padding { padding: 4rem 0 !important; }
-  .heading-xl { font-size: clamp(2.5rem, 10vw, 3rem); padding-top: 1rem; }
+  .section-padding { padding: 4.5rem 1rem !important; }
+  .heading-xl { font-size: clamp(2.5rem, 10vw, 3rem); padding-top: 1.5rem; }
   .heading-l { font-size: clamp(2rem, 8vw, 2.5rem); }
 }
 
