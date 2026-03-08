@@ -17,12 +17,34 @@ export default function Inquiries() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real application, you would handle the form submission here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000); // Reset after 5s
+    
+    try {
+      // Send the email using formsubmit.co's free AJAX API
+      await fetch("https://formsubmit.co/ajax/zenthycs@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            service: formData.service,
+            budget: formData.budget,
+            message: formData.message,
+            _subject: `New Project Inquiry from ${formData.name}`,
+        })
+      });
+      
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', service: 'website', budget: '', message: '' });
+      setTimeout(() => setIsSubmitted(false), 5000); // Reset after 5s
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error sending your message. Please try again.');
+    }
   };
 
   return (
