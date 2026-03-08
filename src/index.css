@@ -399,25 +399,30 @@ ul {
     left: 25px;
   }
   .process-circle {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
   }
   .process-card {
     margin-left: 1.5rem;
-    padding: 1.5rem;
-  }
-  .stats-panel {
-    padding: 3rem 1.5rem;
-  }
-  .service-card {
     padding: 2rem 1.5rem;
   }
+  .stats-panel {
+    padding: 4rem 1.5rem;
+  }
+  .service-card {
+    padding: 2.5rem 1.5rem;
+  }
   .service-modal {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   .inquiry-panel {
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
+  footer .container {
+    gap: 2rem !important;
+  }
+  
+  /* Additional section padding rules */
+  .section-padding { padding: 5rem 1rem !important; }
 }
-
