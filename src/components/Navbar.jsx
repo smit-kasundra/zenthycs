@@ -35,7 +35,7 @@ export default function Navbar() {
           Zenthycs<span style={{ color: 'var(--accent-neon)' }}>.</span>
         </a>
         <ul style={{ display: 'flex', gap: '2rem', alignItems: 'center', '@media (max-width: 768px)': { display: 'none' }}}>
-          {['About', 'Services', 'Process', 'Portfolio'].map((item) => (
+          {['About', 'Services', 'Process'].map((item) => (
             <li key={item}>
               <a href={`#${item.toLowerCase()}`} className="interactive text-body" style={{ fontWeight: 500, transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='white'} onMouseOut={e => e.target.style.color='var(--text-secondary)'}>
                 {item}
