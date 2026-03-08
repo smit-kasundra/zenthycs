@@ -19,7 +19,7 @@ function Counter({ from, to, suffix }) {
     }
   }, [from, to, isInView, suffix]);
 
-  return <span ref={nodeRef} style={{ fontSize: '4rem', fontWeight: 800, color: 'var(--text-primary)', lineHeight: 1 }}>{from}{suffix}</span>;
+  return <span ref={nodeRef} style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 800, color: 'var(--text-primary)', lineHeight: 1 }}>{from}{suffix}</span>;
 }
 
 export default function Stats() {
@@ -31,7 +31,7 @@ export default function Stats() {
 
   return (
     <section className="section-padding container">
-      <div className="glass-panel" style={{ padding: '5rem 3rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <div className="glass-panel stats-panel" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: '-50%', left: '50%', transform: 'translateX(-50%)', width: '100%', height: '100%', background: 'radial-gradient(ellipse, var(--accent-purple) 0%, transparent 70%)', opacity: 0.1, filter: 'blur(80px)' }} />
 
         <motion.h2 

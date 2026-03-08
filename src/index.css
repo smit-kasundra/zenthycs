@@ -234,9 +234,17 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .bg-blobs, 
+  /* Brighter shades for mobile backgrounds/blobs and removing animation for performance instead of fully hiding */
+  .bg-blobs {
+    display: block !important;
+  }
+  .blob {
+    animation: none !important;
+    filter: blur(60px) !important;
+    opacity: 0.6 !important;
+  }
   div[style*="z-index: -1"] {
-    display: none !important; /* Hide expensive blur background on mobile to prevent lag */
+    opacity: 0.4 !important; /* Boost gradient brightness inline */
   }
 
   /* Improve spacing and typography for mobile */
@@ -246,5 +254,58 @@ ul {
   
   /* Reset cursor to auto on mobile explicitly */
   * { cursor: auto !important; }
+}
+
+/* Base Responsive Component Classes */
+.process-line {
+  left: 50px;
+}
+.process-circle {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+}
+.process-card {
+  margin-left: 3rem;
+  padding: 2.5rem;
+}
+.stats-panel {
+  padding: 5rem 3rem;
+}
+.service-card {
+  padding: 3rem 2rem;
+}
+.service-modal {
+  padding: 3rem;
+}
+.inquiry-panel {
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .process-line {
+    left: 25px;
+  }
+  .process-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .process-card {
+    margin-left: 1.5rem;
+    padding: 1.5rem;
+  }
+  .stats-panel {
+    padding: 3rem 1.5rem;
+  }
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+  .service-modal {
+    padding: 1.5rem;
+  }
+  .inquiry-panel {
+    padding: 1.5rem;
+  }
 }
 

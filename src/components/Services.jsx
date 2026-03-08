@@ -102,9 +102,8 @@ export default function Services() {
             <div 
               ref={(el) => cardsRef.current[idx] = el}
               onClick={() => setActiveService(service)}
-              className="glass-panel interactive"
+              className="glass-panel interactive service-card"
               style={{
-                padding: '3rem 2rem',
                 height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
@@ -146,8 +145,8 @@ export default function Services() {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="glass-panel"
-              style={{ width: '100%', maxWidth: '600px', padding: '3rem', position: 'relative', border: '1px solid var(--accent-purple)', background: 'var(--bg-secondary)', borderRadius: '24px' }}
+              className="glass-panel service-modal"
+              style={{ width: '100%', maxWidth: '600px', position: 'relative', border: '1px solid var(--accent-purple)', background: 'var(--bg-secondary)', borderRadius: '24px' }}
             >
               <button 
                 onClick={() => setActiveService(null)}

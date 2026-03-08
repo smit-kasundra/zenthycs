@@ -83,8 +83,8 @@ export default function Inquiries() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="glass-panel"
-        style={{ maxWidth: '800px', margin: '0 auto', padding: '3rem', position: 'relative', overflow: 'hidden' }}
+        className="glass-panel inquiry-panel"
+        style={{ maxWidth: '800px', margin: '0 auto', position: 'relative', overflow: 'hidden' }}
       >
         <div style={{ position: 'absolute', top: '-10%', right: '-10%', width: '200px', height: '200px', background: 'var(--accent-blue)', filter: 'blur(100px)', opacity: 0.1, zIndex: 0 }} />
         

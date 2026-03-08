@@ -31,7 +31,7 @@ export default function Process() {
 
       <div style={{ position: 'relative', maxWidth: '800px', margin: '0 auto' }}>
         {/* Connection line */}
-        <div style={{ position: 'absolute', top: 0, bottom: 0, left: '50px', width: '2px', background: 'var(--glass-border)' }}>
+        <div className="process-line" style={{ position: 'absolute', top: 0, bottom: 0, width: '2px', background: 'var(--glass-border)' }}>
           <motion.div style={{ height: lineHeight, background: 'linear-gradient(to bottom, var(--accent-purple), var(--accent-neon))', width: '100%' }} />
         </div>
 
@@ -44,16 +44,13 @@ export default function Process() {
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             style={{ display: 'flex', alignItems: 'flex-start', marginBottom: idx !== steps.length - 1 ? '4rem' : '0', position: 'relative' }}
           >
-            <div style={{ 
-                width: '100px', 
-                height: '100px', 
+            <div className="process-circle" style={{ 
                 borderRadius: '50%', 
                 background: 'var(--bg-secondary)', 
                 border: '1px solid var(--accent-purple)', 
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center', 
-                fontSize: '2rem', 
                 fontWeight: 800, 
                 color: 'var(--accent-purple)',
                 zIndex: 2,
@@ -62,7 +59,7 @@ export default function Process() {
               {step.num}
             </div>
             
-            <div className="glass-panel interactive" style={{ marginLeft: '3rem', padding: '2.5rem', flexGrow: 1, transition: 'all 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform='translateX(10px)'} onMouseOut={e => e.currentTarget.style.transform='translateX(0)'}>
+            <div className="glass-panel interactive process-card" style={{ flexGrow: 1, transition: 'all 0.3s ease' }} onMouseOver={e => e.currentTarget.style.transform='translateX(10px)'} onMouseOut={e => e.currentTarget.style.transform='translateX(0)'}>
               <h3 className="heading-m" style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>{step.title}</h3>
               <p className="text-body">{step.desc}</p>
             </div>
