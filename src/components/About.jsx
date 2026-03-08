@@ -26,7 +26,7 @@ export default function About() {
             <p className="text-body" style={{ fontSize: '0.9rem' }}>Years Experience</p>
           </div>
           <div>
-            <h3 className="heading-m" style={{ color: 'var(--accent-blue)' }}>24/7</h3>
+            <h3 className="heading-m" style={{ color: 'var(--accent-blue)' }}>24/7</h3> 
             <p className="text-body" style={{ fontSize: '0.9rem' }}>Premium Support</p>
           </div>
         </div>
